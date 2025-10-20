@@ -1112,6 +1112,7 @@ def _mouse_press(button_mask, movement_event):
         raise request_parsers.mouse_event.InvalidButtonStateError(
             'buttons must be > 0 for press operations')
     with _mouse_lock:
+        global _mouse_buttons_pressed
         current = _mouse_buttons_pressed
         new_mask = current | button_mask
         press_event = request_parsers.mouse_event.MouseEvent(
