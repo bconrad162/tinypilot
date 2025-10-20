@@ -1277,7 +1277,7 @@ def hid_keyboard_release_post():
     return _handle_keyboard_release(key_code)
 
 
-@api_blueprint.route('/hid/mouse', methods=['POST'])
+@api_blueprint.route('/hid/mouse', methods=['POST', 'PUT'])
 @required_auth(auth.Role.OPERATOR)
 def hid_mouse_post():
     """Sends a mouse event to the target machine via REST."""
@@ -1446,7 +1446,7 @@ def hid_macro_post():
     return json_response.success()
 
 
-@api_blueprint.route('/hid/cursor', methods=['POST'])
+@api_blueprint.route('/hid/cursor', methods=['POST', 'PUT'])
 @required_auth(auth.Role.OPERATOR)
 def hid_cursor_post():
     """Moves the cursor using absolute pixel coordinates."""

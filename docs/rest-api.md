@@ -68,6 +68,9 @@ can hold up to six non-modifier keys at once.
 
 **Endpoint**: `POST /api/hid/mouse`
 
+> The endpoint also accepts `PUT` requests for compatibility with older
+> TinyPilot clients.
+
 **Purpose**: Sends a mouse event, including button state, movement, and scroll
 wheel deltas.
 
@@ -118,6 +121,9 @@ curl \
 ### Absolute cursor positioning
 
 **Endpoint**: `POST /api/hid/cursor`
+
+> The endpoint also accepts `PUT` requests for compatibility with older
+> TinyPilot clients.
 
 **Purpose**: Moves the cursor to a specific pixel location while optionally
 pressing buttons or scrolling.
