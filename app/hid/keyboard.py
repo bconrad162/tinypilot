@@ -34,3 +34,12 @@ def send_keystrokes(keyboard_path, keystrokes):
     """
     for keystroke in keystrokes:
         send_keystroke(keyboard_path, keystroke)
+
+
+def send_key_state(keyboard_path, modifier_mask, keycodes):
+    """Writes the current key state (modifiers + pressed keys) to the HID bus."""
+    buf = [0] * 8
+    buf[0] = modifier_mask & 0xFF
+    for index, keycode in enumerate(keycodes[:6]):
+        buf[index + 2] = keycode
+    hid_write.write_to_hid_interface(keyboard_path, buf)

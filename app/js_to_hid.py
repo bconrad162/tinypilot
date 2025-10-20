@@ -215,3 +215,13 @@ def _count_modifiers(keystroke):
             int(keystroke.right_alt_modifier) +
             int(keystroke.left_meta_modifier) +
             int(keystroke.right_meta_modifier))
+
+
+def get_key_map():
+    """Returns the mapping between JavaScript key codes and HID keycodes."""
+    return {key: _MAPPING[key] for key in sorted(_MAPPING)}
+
+
+def get_modifier_codes():
+    """Returns the list of recognized modifier codes."""
+    return list(_MODIFIER_KEYCODES)

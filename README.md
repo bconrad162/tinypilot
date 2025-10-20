@@ -98,6 +98,7 @@ You can read more details about the logs [in the wiki](https://github.com/tiny-p
 ## See also
 
 - [TinyPilot Wiki](https://github.com/tiny-pilot/tinypilot/wiki): Guides for tasks related to TinyPilot.
+- [REST input API](docs/rest-api.md): Control TinyPilot via keyboard and mouse HTTP endpoints.
 
 ## Acknowledgments
 
@@ -122,7 +123,6 @@ TinyPilot Pro includes additional features for professional users, including:
 
 - [Boot into a virtual disk drive](https://tinypilotkvm.com/blogs/news/tinypilot-adds-virtual-storage-bandwidth-tuning#boot-into-a-virtual-disk-drive)
 - [Load virtual disk drive from URL](https://tinypilotkvm.com/blogs/news/whats-new-in-1-5-1#load-virtual-disk-drive-from-url)
-- [Control TinyPilot programmatically](https://tinypilotkvm.com/blogs/news/tinypilots-july-release-improves-update-experience#control-tinypilot-programmatically)
 - [Mount virtual media in CD-ROM mode](https://tinypilotkvm.com/blogs/news/whats-new-in-tinypilots-september-2021-update#mount-virtual-media-in-cd-rom-mode)
 - [Wake on LAN](https://tinypilotkvm.com/blogs/news/whats-new-in-tinypilots-september-2021-update#wake-on-lan)
 - [Manage SSH access from the web interface](https://tinypilotkvm.com/blogs/news/whats-new-in-2022-01#manage-ssh-access-from-the-web)

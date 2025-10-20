@@ -123,3 +123,16 @@ def _parse_wheel_value(wheel_value):
         raise InvalidWheelValueError(
             f'Wheel value must be -1, 0, or 1: {wheel_value}')
     return wheel_value
+
+
+def get_capabilities():
+    """Returns the mouse limits that TinyPilot enforces."""
+    return {
+        'maxButtons': _MAX_BUTTONS,
+        'maxButtonState': _MAX_BUTTON_STATE,
+        'wheelDeltaValues': (-1, 0, 1),
+        'relativeRange': {
+            'min': 0.0,
+            'max': 1.0,
+        },
+    }
